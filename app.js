@@ -1,7 +1,7 @@
 const http = require('http');
 
 http.createServer(function(req, resp) {
-	resp.write("Bonjour Monde!!"); 
+	resp.write("Bonjour Monde!! \n Hola Mundo!! \n Bonjou Monde!! \n Oi Mundo!! \n Hello World!!"); 
 	resp.end();
 }).listen(3000);
 
