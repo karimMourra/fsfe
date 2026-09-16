@@ -29,6 +29,11 @@ wss.on('connection', function connection(ws) {
         console.log('A client has disconnected!');
         wss.broadcast(`Current visitors: ${numClients}`);
     });
+
+    ws.onmessage = event => {
+        console.log('Message came in: ', event.data);
+        wss.broadcast(`We got message: ${event.data}`);
+    };
 });
 
 wss.broadcast = function broadcast(data) {
